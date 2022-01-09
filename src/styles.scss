@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+li{
+    list-style-type:none;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.error{
+    color: red;
+}
+button{
+    margin: 10px;
+    padding: 5px;
+}

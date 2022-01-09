@@ -1,0 +1,23 @@
+<div class="mainContainer">
+    <p class="mainnote">Add Note</p>
+    <form [formGroup]="addNoteForm" (ngSubmit)="submit()">
+        <div class="form-group">
+            <p class="title">Title :</p>
+            <input type="text" formControlName="title" class="input" [(ngModel)]="title" />
+            <p *ngIf="
+                                  addNoteForm.controls['title'].hasError('required') &&
+                                  addNoteForm.controls['title'].touched
+                                "> Title is required
+            </p>
+            <div class="form-group">
+                <p class="description">Description :</p>
+                <input type="text" class="input1" formControlName="description" [(ngModel)]="descriptions" />
+                <p
+                    *ngIf="addNoteForm.controls['description'].hasError('required') && addNoteForm.controls['description'].touched">
+                    Description is required.
+                </p>
+            </div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>

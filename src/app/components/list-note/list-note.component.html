@@ -1,0 +1,19 @@
+<p>List Note</p>
+<div>
+    <ul *ngFor="let note of list,let i =index">
+        <li>
+            <div class="note-list">
+                <div>{{note['update_at'] | date:'h:mm a z'}}</div>
+                <div class="note-details">
+                    <div>{{note['title']}}</div>
+                    <div>
+                        <a routerLink="/add-note/{{i}}">
+                            <div class="cursor-pointer delete" (click)="deleteNote(i)">Edit</div>
+                        </a>
+                        <div class="cursor-pointer delete" (click)="deleteNote(i)">Delete</div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
